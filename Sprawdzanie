@@ -1,0 +1,19 @@
+Witaj to skript dla ciebie (WERSJA BEZ /sprawdz cheater i /sprawdz czysty)
+
+options:
+  tag: &7[&aPortfelSMP&7]
+command /sprawdz [<text>] [<player>]:
+    permission: portfelsmp.sprawdz
+    permission message: {@tag} &cNie masz permisji do tej komendy
+    aliases: spr, check
+    trigger:
+        if argument 1 is not set:
+            send "{@tag} &7/Sprawdz help"
+        if argument 1 is "Sprawdz":
+            teleport arg 2 to location(97, 157, -429)
+            send title "&cJESTES SPRAWDZANY" to argument 2 
+            send subtitle "&7Patrz Chat" to argument 2 
+            send "&4Cheaty = ban 10d" to argument 2 
+            send "&aCzysty = Brak bana" to argument 2 
+            send "&cBrak wspolpracy = Ban 15d" to argument 2 
+            send "&4Przyznanie sie = ban 10d &7(/przyznajesie)" to argument 2
